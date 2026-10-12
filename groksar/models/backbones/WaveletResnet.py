@@ -1246,7 +1246,7 @@ class LFSSBlock(nn.Module):
 
 
 class WTEB(nn.Module):
-    def __init__(self, dim, hw, n_layer=2, n_l_blocks=1, expand=0.5, partition_stride=(8, 8)):
+    def __init__(self, dim, hw, n_layer=2, n_l_blocks=1, expand=0.75, partition_stride=(8, 8)):
         super().__init__()
         self.dwt = DWT()
         self.l_blk = LFSSBlockLocal(dim, expand=expand)

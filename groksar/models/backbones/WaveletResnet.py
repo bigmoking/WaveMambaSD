@@ -698,9 +698,9 @@ class DHFG(nn.Module):
         hf = lh + hl + hh
         common = self.common_attention(hf)
         
-        hl = self.hl_adapter(hl)+hl
-        lh = self.lh_adapter(lh)+lh
-        hh = self.hh_adapter(hh)+hh
+        hl = self.hl_adapter(hl)
+        lh = self.lh_adapter(lh)
+        hh = self.hh_adapter(hh)
 
         Ai = self.Ii_attention(common)
         Aj = self.Ij_attention(common)
